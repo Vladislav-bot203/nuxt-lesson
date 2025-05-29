@@ -3,9 +3,9 @@
     <header>
       <Navbar>
         <Container>
-          <NavbarBrand><nuxt-link to="/">Main page</nuxt-link></NavbarBrand>
-          <NavbarBrand><nuxt-link to="/contact">Contact page</nuxt-link></NavbarBrand>
-          <NavbarBrand><nuxt-link to="/users">Users page</nuxt-link></NavbarBrand>
+          <nuxt-link to="/">Main page</nuxt-link>
+          <nuxt-link to="/contact">Contact page</nuxt-link>
+          <nuxt-link to="/users">Users page</nuxt-link>
         </Container>
       </Navbar>
     </header>

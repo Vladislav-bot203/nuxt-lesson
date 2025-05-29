@@ -1,18 +1,16 @@
 <template>
   <div>
-    <h1>{{ header }}</h1>
-    <Alert color="primary"> A simple primary alert—check it out! </Alert>
+    <h1>Main</h1>
+    <Alert color="primary">{{ data.mess }}</Alert>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      header: "Hello World",
-    };
-  },
-};
+<script setup>
+const { data } = await useFetch('/api/example', {
+  method: 'post',
+  body: { name:'Alex', id: 1 }
+});
+
 </script>
 
 <style>
