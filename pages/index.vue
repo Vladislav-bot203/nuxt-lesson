@@ -1,20 +1,21 @@
 <template>
   <div>
-    <h1>Main</h1>
-    <Alert color="primary">{{ data.mess }}</Alert>
+    <h1>Home page</h1>
   </div>
 </template>
 
-<script setup>
-const { data } = await useFetch('/api/example', {
-  method: 'post',
-  body: { name:'Alex', id: 1 }
-});
-
+<script lang="ts" setup>
+useSeoMeta({
+  title: "Home",
+  ogTitle: "Home",
+  description: "This is the main page",
+  ogDescription: "This is the main page"
+})
 </script>
 
-<style>
+<style lang="scss" scoped>
 h1 {
-  color: red;
+  @include Title;
+  color: $primary;
 }
 </style>
