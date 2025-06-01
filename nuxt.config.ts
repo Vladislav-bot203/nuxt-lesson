@@ -10,7 +10,11 @@ export default defineNuxtConfig({
     "dayjs-nuxt",
     "nuxt-typed-router",
     "nuxt-file-storage",
+    "@prisma/nuxt",
   ],
+  prisma: {
+    autoSetupPrisma: true,
+  },
   css: [
     "@fontsource/roboto/400.css",
     "@fontsource/roboto/700.css",
@@ -30,4 +34,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  experimental: {
+    componentIslands: true
+  }
 });
